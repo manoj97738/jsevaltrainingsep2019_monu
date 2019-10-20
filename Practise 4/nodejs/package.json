@@ -1,0 +1,15 @@
+{
+  "name": "monu",
+  "version": "1.0.0",
+  "description": "This is nodejs for training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "https"
+  ],
+  "author": "monu <msmadhur7@gmail.com>",
+  "license": "MIT"
+}
