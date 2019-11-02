@@ -36,7 +36,10 @@ app.delete('/login', (req, res) => {
 app.get('/signup', (req, res) => {
     res.send('delete signup World!');
 })
-app.get('/**', (req, res) => {
+app.all('/**', (req, res) => {
     res.send('No route found!');
 })
+// app.get('/**', (req, res) => {
+//     res.send('No route found!');
+// })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
