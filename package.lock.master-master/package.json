@@ -1,0 +1,22 @@
+{
+  "name": "package.lock.master",
+  "version": "1.0.0",
+  "description": "Master repo to test package-lock.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzheng/package.lock.master.git"
+  },
+  "author": "fzheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fzheng/package.lock.master/issues"
+  },
+  "homepage": "https://github.com/fzheng/package.lock.master#readme",
+  "dependencies": {
+    "package.lock.slave": "git+ssh://git@github.com/fzheng/package.lock.slave.git#master"
+  }
+}
