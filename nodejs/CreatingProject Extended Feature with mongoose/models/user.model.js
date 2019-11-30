@@ -9,7 +9,7 @@ const User = new Schema({
 });
 // a setter
 User.path('name').set(function (v) {
-    return 'Mr' + v;
+    return 'Mr ' + v;
 });
 
 module.exports = mongoose.model('User', User);
