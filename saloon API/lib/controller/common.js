@@ -1,12 +1,13 @@
-const config = require('./config/app.config');
-const ResHand = require('./lib/common/response.handler');
+const BaseController = require('../base');
 
-class CommonController {
-
+class CommonController extends BaseController {
+    constructor() {
+        super();
+    }
     errorHandler(req, res, next) {
         req.isError = true;
         req.error = "Some error"
-        req.isError === true ? ResHand.resSend(req, res, false, config.errorMsg, [], 500, req.error) : next();
+        req.isError === true ? this.ResHand.resSend(req, res, false, this.config.errorMsg, [], 500, req.error) : next();
     }
     defaultRoute(req, res, next) {
         res.status(404).send({
