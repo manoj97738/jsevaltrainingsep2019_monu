@@ -9,9 +9,10 @@ class ResponseHandler {
      * @param {*} httpcode 
      * @param {*} error 
      */
-    resSend(req, res, status, msg, data, httpcode, error) {
+    resSend(req, res, status, msg, data, httpcode, error, token) {
         res.status(httpcode ? httpcode : 200);
-        const Obj = this.senObj(status, msg, data, error)
+        const Obj = this.senObj(status, msg, data, error, token);
+        console.log(Obj)
         res.send(Obj)
     };
     /**
@@ -21,12 +22,13 @@ class ResponseHandler {
      * @param {*} data 
      * @param {*} error 
      */
-    senObj(status, msg, data, error) {
+    senObj(status, msg, data, error,token) {
         return {
             status: status,
             data: data,
             error: error,
-            message: msg
+            message: msg,
+            token: token
         }
     }
 }

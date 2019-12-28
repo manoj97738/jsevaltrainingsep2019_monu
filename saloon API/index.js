@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res, next) => {
     ResHand.resSend(req, res, true, '', []);
 });
+app.use('/', require('./lib/auth/user.route'));
 app.use('/user', require('./lib/user/user.route'));
 app.use(common.errorHandler);
 app.all('**', common.defaultRoute);
