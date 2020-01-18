@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 class DBConfig {
+    /**
+     * 
+     */
     constructor() {
         mongoose.connect(this.mongoURI, { useNewUrlParser: true });
         this.db = mongoose.connection;
@@ -10,6 +13,9 @@ class DBConfig {
             console.log(`We are connecected`)
         });
     }
+    /**
+     * 
+     */
     get mongoURI() {
         return typeof (process.env.mongoURI) !== 'undefined' 
                 ? process.env.mongoURI 
