@@ -1,1 +1,19 @@
 <p>contact works!</p>
+<form [formGroup]="profileForm">
+    <input type="text" formControlName="email" />
+    <input type="text" formControlName="password" />
+    <input type="text" formControlName="age" />
+    <button (click)="myfunction()">Submit</button>
+</form>
+<table border="1">
+    <tr>
+        <th>email</th>
+        <th>password</th>
+        <th>age</th>
+    </tr>
+    <tr *ngFor="let u of Users">
+        <th>{{u.email}}</th>
+        <th>{{u.password}}</th>
+        <th>{{u.age}}</th>
+    </tr>
+</table>

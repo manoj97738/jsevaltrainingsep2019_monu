@@ -1,0 +1,17 @@
+<form [formGroup]="formAbout" style="width: 350px;margin:0 auto;padding:20px;border:1px solid #e8e8e8;">
+    <input type="text" class="form-control" [class.error-class]="name.errors && submitted" formControlName="name">
+    <br/>
+    <input type="text" class="form-control" [class.error-class]="age.errors && submitted" formControlName="age">
+    <br/>
+    <input type="text" class="form-control" [class.error-class]="phone.errors && submitted" formControlName="phone"> {{phone.errors| json}}
+    <h4 style="color: red;" *ngIf="phone.errors && submitted">
+        <span *ngIf="phone.errors.required">This field is required</span>
+        <span *ngIf="phone.errors.minlength">This is filed must be {{phone.errors.minlength.requiredLength}} length</span>
+    </h4>
+    <br/>
+    <input type="text" class="form-control" [class.error-class]="email.errors && submitted" formControlName="email">
+    <h4 style="color: red;">{{errors('email')}}</h4>
+    {{email.errors| json}}
+    <br/>
+    <button type="button" (click)="submit()">Submit</button>
+</form>
