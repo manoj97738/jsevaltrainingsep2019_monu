@@ -51,6 +51,9 @@ export class AboutusComponent implements OnInit {
       if (controlNameRef.errors.max) {
         return `this field must be ${controlNameRef.errors.max.requiredLength}}`;
       }
+      if (controlNameRef.errors.pattern) {
+        return `this field must be ${controlNameRef.errors.max.requiredLength}}`;
+      }
     }
   }
   ngOnInit() {

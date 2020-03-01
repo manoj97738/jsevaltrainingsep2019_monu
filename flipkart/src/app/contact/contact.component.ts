@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
+  name = "Madhur is A GoOd BOY";
+  salary =  10205205.2525;
+  birthday=new Date();
   constructor() { }
 
   ngOnInit() {
